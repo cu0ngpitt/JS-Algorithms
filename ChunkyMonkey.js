@@ -2,9 +2,8 @@ function chunkArrayInGroups(arr, size) {
   let newArr = [],
       j = size;
 
-  for(var i = 0; i < arr.length; i) {
-    newArr.push(arr.slice(i, j));
-    i += size;
+  for(var i = 0; i < arr.length; i += size) {
+    newArr.push(arr.slice(i, j));    
     j += size;
   }
   console.log(newArr);
